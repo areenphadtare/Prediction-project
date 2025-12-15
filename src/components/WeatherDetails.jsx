@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function WeatherDetails({ result }) {
-  if (!result) return null; // safety check
+  if (!result) return null; 
 
   return (
     <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-in-up">

@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; 
 import WeatherDetails from "./components/WeatherDetails";
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+
 export default function RoadRisk() {
   const [city, setCity] = useState("");
   const [result, setResult] = useState(null);
+
   const [loading, setLoading] = useState(false);
 
   const API_KEY = import.meta.env.VITE_WEATHER_API_KEY?.trim();
@@ -28,6 +30,10 @@ export default function RoadRisk() {
       return 'weather-clear floating-shapes';
     }
   };
+
+
+  const API_KEY = "bfe596fa6f7613c874732abe912fe034";
+
 
   const getAlertMessage = (score) => {
     if (score >= 90) return { text: "EXTREME ALERT! Avoid travel!", color: "bg-red-900", textColor: "text-white" };
