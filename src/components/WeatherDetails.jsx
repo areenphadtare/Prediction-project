@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function WeatherDetails({ result }) {
-  if (!result) return null; // safety check
+  if (!result) return null; 
 
   return (
     <div className="mt-4 p-4 bg-gray-100 rounded-md">
